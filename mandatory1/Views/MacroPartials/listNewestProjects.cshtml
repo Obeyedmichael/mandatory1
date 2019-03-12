@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+<div>
+    Model.Content.Site().Children.Where(x => x.DocumentTypeAlias == "ProjectsOverview")
+    .First()
+    .Children()Where(x => x.HasValue("projectStatus") && Umbraco.GetPreValueAsString(x.GetPropertyValue<int>("projectStatus")) == "Completed")
+    .OrderByDescending(x => x.CreateDate)
+    .Take(5)
+</div>

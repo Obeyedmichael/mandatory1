@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<ContentModels.HomePage>
+    @using ContentModels = Umbraco.Web.PublishedContentModels; 
+    @{ Layout = "Master.cshtml"; }
+
+    <div id="main-container">
+        <div id="main" class="wrapper clearfix">
+            @Umbraco.Field("mainContent")
+        </div>
+    </div>
