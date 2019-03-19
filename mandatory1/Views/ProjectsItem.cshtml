@@ -2,14 +2,15 @@
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
 	Layout = "Master.cshtml";
+	
+    
 }
 
 <div id="main-container">
     <div id="main" class="wrapper clearfix">
         <section>
             <h2>@Umbraco.Field("projectsTitle")</h2>
-            @Umbraco.Field("projectStatus")
-           @Umbraco.Field("projectsBodyText")
+           @Umbraco.Field("projectDescription")
         </section>	
     </div>
 </div>
